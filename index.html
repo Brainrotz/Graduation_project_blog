@@ -10,7 +10,7 @@ src:url('https://dl.dropbox.com/scl/fi/bqitfm4rr6tfgt3ea2jrq/Spirit.ttf?rlkey=r8
 }
 </style>
      <link href="css/hover.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css">
 
     <title>Cristina's Graduation Project research blog!</title>
 </head>
@@ -22,7 +22,7 @@ src:url('https://dl.dropbox.com/scl/fi/bqitfm4rr6tfgt3ea2jrq/Spirit.ttf?rlkey=r8
     alt="Music button"
   >
 </div>
-
+<!--Wow i wonder who just recently went to a Jamiroquai concert...-->
 <audio id="song1" src="music/Music of the Mind.mp3" preload="auto"></audio>
 <audio id="song2" src="music/Canned Heat - Jamiroquai.mp3" preload="auto"></audio>
 <audio id="song3" src="music/Seven Days in Sunny June - Jamiroquai.mp3" preload="auto" loop></audio>
@@ -75,42 +75,180 @@ src:url('https://dl.dropbox.com/scl/fi/bqitfm4rr6tfgt3ea2jrq/Spirit.ttf?rlkey=r8
 
  <div class="center-box">
 
-    <nav class="top-nav">
-      <a href="index.html" class="nav-item hvr-skew">
-        <img src="images/hme.gif.gif" alt="Home">
-        Home
-      </a>
-      <a href="projectresearch.html" class="nav-item hvr-skew">
-        <img src="images/type.webp" alt="Project research">
-       Project research
-      </a>
-      <a href="images.html" class="nav-item hvr-skew">
-        <img src="images/book.gif" alt="Gameplay research">
-        Gameplay research
-      </a>
-      <a href="misc.html" class="nav-item hvr-skew">
-        <img src="images/pin 1.gif" alt="Misc">
-        Misc
-      </a>
-      <a href="scrapped.html" class="nav-item hvr-skew">
-        <img src="images/scrapped.gif" alt="Scrapped ideas">
-        Scrapped ideas
-      </a>
-      <a href="story.html" class="nav-item hvr-skew">
-        <img src="images/arcade.gif" alt="StoryBoarding and planning">
-       StoryBoarding and planning
-      </a>
-    </nav>
+   <nav class="top-nav">
+  <a href="#" class="nav-item hvr-skew" data-page="home">
+    <img src="images/hme.gif.gif" alt="Home">
+    Home
+  </a>
+
+  <a href="#" class="nav-item hvr-skew" data-page="project">
+    <img src="images/type.webp" alt="Project research">
+    Project research
+  </a>
+
+  <a href="#" class="nav-item hvr-skew" data-page="gameplay">
+    <img src="images/book.gif" alt="Gameplay research">
+    Gameplay research
+  </a>
+
+  <a href="#" class="nav-item hvr-skew" data-page="misc">
+    <img src="images/pin 1.gif" alt="Misc">
+    Misc
+  </a>
+
+  <a href="#" class="nav-item hvr-skew" data-page="scrapped">
+    <img src="images/scrapped.gif" alt="Scrapped ideas">
+    Scrapped ideas
+  </a>
+
+  <a href="#" class="nav-item hvr-skew" data-page="story">
+    <img src="images/arcade.gif" alt="StoryBoarding and planning">
+    StoryBoarding and planning
+  </a>
+</nav>
 
     <div class="content">
         <div class="title">
       <h2 id="h2">Cristina Research Blog</h2>
       </div>
-      <div class="main">
+     <div class="main" id="main-content">
       <p id="p">Welcome to my research blog!</p>
       </div>
     </div>
-
   </div>
+
+<script>
+const content = {
+  home: `
+    <p>Welcome to my research blog!</p>
+  `,
+  project: `
+    <h3>Project Research</h3>
+    <p>This section documents my research and readings.</p>
+    <h3>Paper notes</h3>
+    <div id="paper-notes">Loading notes...</div>
+  `,
+  gameplay: `
+    <h3>Gameplay Research</h3>
+    <p>Games I studied, mechanics, and notes.</p>
+    <div id="gameplay-notes">Loading gameplay research...</div>
+  `,
+  misc: `
+    <h3>Misc</h3>
+    <p>Random ideas, inspiration, and references.</p>
+  `,
+  scrapped: `
+    <h3>Scrapped Ideas</h3>
+    <p>Things that didn’t make the cut.</p>
+  `,
+  story: `
+    <h3>Storyboarding & Planning</h3>
+    <p>Narrative ideas and planning sketches.</p>
+  `
+};
+
+const main = document.getElementById("main-content");
+const navItems = document.querySelectorAll(".nav-item");
+
+// JSON paths
+const jsonURL = "notes.json";
+const gameplayURL = "gameplay.json";
+
+navItems.forEach(item => {
+  item.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const page = item.dataset.page;
+    main.innerHTML = content[page];
+
+    if (page === "project") {
+      await loadPaperNotes();
+    }
+
+    if (page === "gameplay") {
+      await loadGameplayNotes();
+    }
+  });
+});
+
+// PROJECT 
+async function loadPaperNotes() {
+  const container = document.getElementById("paper-notes");
+  if (!container) return;
+
+  try {
+    const res = await fetch(jsonURL);
+    const data = await res.json();
+
+    let html = `
+      <table>
+        <thead>
+          <tr>
+            <th class="title">Title</th>
+            <th class="notes">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    data.forEach(item => {
+      html += `
+        <tr>
+          <td class="title">
+            <a href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
+          </td>
+          <td class="notes">${item.notes}</td>
+        </tr>
+      `;
+    });
+
+    html += "</tbody></table>";
+    container.innerHTML = html;
+
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = "<p>Failed to load paper notes.</p>";
+  }
+}
+
+// GAMEPLAY 
+async function loadGameplayNotes() {
+  const container = document.getElementById("gameplay-notes");
+  if (!container) return;
+
+  try {
+    const res = await fetch(gameplayURL);
+    const data = await res.json();
+
+    let html = `<div class="gameplay-list">`;
+
+    data.forEach(game => {
+      html += `
+        <div class="gameplay-item">
+         <h4 class="gameplay-title">
+  <a href="${game.link}" target="_blank" rel="noopener">
+    ${game.title}
+  </a>
+</h4>
+          <div class="gameplay-images">
+            ${game.images.map(img => `
+              <img src="${img}" alt="${game.title}">
+            `).join("")}
+          </div>
+
+          <p class="gameplay-notes">${game.notes}</p>
+        </div>
+      `;
+    });
+
+    html += `</div>`;
+    container.innerHTML = html;
+
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = "<p>Failed to load gameplay research.</p>";
+  }
+}
+</script>
+
 </body>
 </html>

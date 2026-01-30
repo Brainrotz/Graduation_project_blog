@@ -1,0 +1,57 @@
+[
+  {
+    "title": "The Stanley Parable",
+    "link": "https://store.steampowered.com/app/221910/The_Stanley_Parable/",
+    "images": ["images/stanley1.jpg","images/stanley2.jpg","images/stanley3.jpg"],
+    "notes": "The Stanley Parable is an experimental narrative-driven first person game.The player guides a silent protagonist freely through diverging pathways with multiple endings. A cult classic game in this genre. Intresting mechanics you can actively ignore the narration and do what you want. Essentially youre trapped in your work place and are looking for the exit.Particularly enjoyed the section where you have to prevent the baby from burning to death. That sequence geniuenly goes on for 4 hrs before youre able to complete it.In the end the narrator essentially does everything he can to prevent you from leaving/finding out the truth. Draws into my game idea in the sense the game is stopping you from just going directly to the exit."
+  },
+  {
+    "title": "No, i am not Human",
+    "link": "https://store.steampowered.com/app/3180070/No_Im_not_a_Human/",
+    "images": ["images/no1.jpg","images/no2.jpg","images/no3.jpg"],
+    "notes": "No, i am not human is a first-person horror video game developed by Russian studio TRIOSKAZ.It is an anxiety horror about paranoia in the end of times.Essentially youre running a safe house and have to assess people who try to gain entry in various ways such as phsyical inspections and talking to them.I am a big fan of horror games in general and i really enjoy how off-putting the art style is.The game uses a sort of uncanny valley style to make the player feel constantly on edge and its a testament to the art style to be able to achieve that feeling"
+  },
+   {
+    "title": "Shift At Midnight",
+    "link": "https://bunmuen.itch.io/shiftatmidnight",
+    "images": ["images/shift1.jpg","images/shift2.jpg","images/shift3.jpg"],
+    "notes": "Shift At Midnight is an online co-op horror game set in a rural 90s gas station.The catch is that some of your customers are not human.I would argue this game is more comedic than horror but its fun none the less. I enjoy the low poly art style."
+  },
+  {
+    "title": "Milk inside a bag of milk",
+    "link": "https://nikita-kryukov.itch.io/pmkm",
+    "images": ["images/milk1.jpg","images/milk2.jpg","images/milk3.jpg"],
+    "notes": "Milk insdie a bag of milk so on and so forth is a psychological horror visual novel game developed by Nikita Krukov (why do russians love making horror games?).The game itself is a depression simulator described as A short story about what sort of challenges everyday little things can be. Help the girl buy milk, be the first not to disappoint her.I like the very simple pixel art style."
+  },
+   {
+    "title": "The Elder Scrolls Daggerfall",
+    "link": "https://store.steampowered.com/app/1812390/The_Elder_Scrolls_II_Daggerfall/",
+    "images": ["images/d1.jpg","images/d2.jpg","images/d3.jpg"],
+    "notes": "The Elder Scrolls Daggerfall is an action role-playing game published by bethesda.This game is so annoying but that might just be a skill issue on my part.. The gimmick with this game is the map is infinitly procedurally generated.I like the low poly look ..however this obviously wasnt by choice as the game was made in 1996 and they all pretty much looked like this back then."
+   },
+      {
+    "title": "Cheshire in a Chatroom ",
+    "link": "https://arkicade.itch.io/cheshire-in-a-chatroom",
+    "images": ["images/chat2.png","images/chat1.png","images/chat3.png"],
+    "notes": "Cheshire in a Chatroom is a small PICO-8 game made for Jamulator 2021, a game jam where you have to make a simulation-based game. In this case, this submission is a drawing chatroom simulator, it's meant to mimic the pitcochat rooms on the Nintendo DS but on an older console.Very cool game produced on the same software ill be using. shows what you can actually make with pico-8, i like that it starts normal but you realise pretty quickly you probably shouldnt be talking to this person. Very polished an good example of what is possible with Pico-8"
+      },
+        {
+    "title": "Pico Tennis",
+    "link": "https://paranoidcactus.itch.io/pico-tennis",
+    "images": ["images/ten2.png","images/ten1.png","images/ten3.png"],
+    "notes":"Noooo im not playing games im researching.... Pico tennis is a cpu vs player or pvp tennis game developed on...you guessed it pico 8! I lost every single match but again skill issue , pretty cool game you can even customise your character! only really has 4 controls, z serve , c hit , left and right arrow to move. I like how its 3D very cool"
+        },
+            {
+    "title": "Bloody Hell",
+    "link": "https://guerragames.itch.io/bloody-hell",
+    "images": ["images/bull1.png","images/bull2.png","images/bull3.png"],
+    "notes":"For some reason the concept of having a bullet hell random encounter in my game is very amusing... I do want to take a slightly comedic abusurb stance when it comes to my random encounters (though not all random as some are based on real encounters ive had irl). Yeah not really sure why a bullet hell sequence mid simulation out of nowhere is currently the most amusing thing in the world to me right now. I wanted to see if it was possible to make a random bullet hell sequence so this is a bullet hell game made with Pico 8. I do have a better justification for why a bullet hell sequence would be included besides haha funny. i just think bullet hells are ridiculously tedious. Ive chosen this one because it is a bare bones bullet hell simulation, you have the player coordinates at the top and randomly generated blobs (i think theyre random though it also likely a pregenerated pattern)"
+            },
+                   {
+    "title": "Silent Hill PT",
+    "link": "https://silenthill.fandom.com/wiki/P.T.",
+    "images": ["images/pt1.jpg","images/pt2.jpg","images/pt3.jpg"],
+    "notes":"A moment of silence for this masterpiece.....Silent Hill PT is a cancelled game that had a demo that has somehow made it to cult classic status. The demo is just a endlessly looping corridor but every time you loop something moves/changes/appears.Ive personally never played the demo but i remember when the game was announced gameplays of the demo took over youtube. Honestly very effective horror game for what is essentially just a looping corridor.I may be blinded by nostalgia a bit but this was one of the first times i ever wanted to actually play a horror game. "
+           }
+
+          ]

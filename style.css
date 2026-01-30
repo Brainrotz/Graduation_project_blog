@@ -71,7 +71,7 @@
     .content {
       flex: 1;
       padding: 20px;
-      overflow: hidden;
+      overflow: scroll;
     }
     #h2{
         text-align: center;
@@ -91,11 +91,16 @@
       margin-top: 12px
     }
 
-    #p{
+    .main p{
         font-size: 30px;
         margin-top: 15px
+  
     }
-
+.main h3{
+  text-decoration: underline;
+  font-size: 40px;
+  margin-top: 15px
+}
     /* Skew */
 .hvr-skew {
   display: inline-block;
@@ -111,4 +116,86 @@
 .hvr-skew:hover, .hvr-skew:focus, .hvr-skew:active {
   -webkit-transform: skew(-10deg);
   transform: skew(-10deg);
+}
+#paper-notes table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* IMPORTANT */
+}
+
+#paper-notes th,
+#paper-notes td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#paper-notes th {
+  background: #f0f0f0;
+}
+
+/* Narrow title column */
+#paper-notes td.title,
+#paper-notes th.title {
+  width: 25%;
+}
+
+/* Wide notes column */
+#paper-notes td.notes,
+#paper-notes th.notes {
+  width: 75%;
+  word-wrap: break-word;
+  white-space: normal;
+  color: black;
+}
+
+#paper-notes a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#paper-notes a:hover {
+  text-decoration: underline;
+}
+.gameplay-list {
+  display: flex;
+  font-size: 30px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gameplay-item {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.gameplay-images {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  margin: 25px 0;
+  margin-left: 15px;
+}
+
+.gameplay-images img {
+  max-width: 350px;
+  height: auto;
+  border: 1px solid #aaa;
+}
+
+.gameplay-notes {
+  color: black;
+}
+.gameplay-title a {
+  color: #f367db;
+  text-decoration: none;
+}
+
+.gameplay-title a:hover {
+  text-decoration: underline;
+}
+
+.gameplay-title {
+  margin-bottom: 8px;
 }
