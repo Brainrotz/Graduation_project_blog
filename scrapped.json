@@ -10,10 +10,14 @@
   },
   {
     "media": ["images/h1.jpg","images/h2.jpg","images/h3.jpg","images/h7.jpg","images/h5.jpg","images/h6.jpg"],
-    "notes": "In real life images of...less than favourable entrances i saw around east london.Very big trend of poorly maintained entrances in working class areas, worse materials used etc."
+    "notes": "In real life images of...less than favourable entrances i saw around east london.Very big trend of poorly maintained entrances in working class areas, worse materials used etc.<br><br>Isnt it kind of funny (well not funny) that we see the condition of working class areas be this low and just shrug it off? Just another way that bias impacts the working class. We had a leak in our bathroom and the council came 26 times in 6 months (yes 26 we had to count when we made a complaint) and they still didnt fix it? Sorry off topic but not really though.<br><br>Not really relevant but while researching into poor doors the number 1 argument for why affordable tennants were not allowed to use the main entrances was because they 'didnt pay for mantienance fee', one time i had to argue on the phone because they charged us £100 lift mantienance fee but the lift hadnt worked in over 2 months..."
   },
   {
     "media": ["images/misc1.png","images/misc2.png","images/misc3.png","images/misc4.png","images/misc5.png","images/misc6.png"],
-    "notes": "Some other scrapped ideas from when it was physcial."
+    "notes": "Some other scrapped ideas from when it was physcial.The plan was to go heavy on the theme of neglect and make it fully horrofied. I want the sculpture to be almost alive , mold the works. This ties back to forensic architecture and making complex data more digestable to the average person.<Br><br> I wanted to make the horrors of neglect and long term abandoment very obvious. I was visualising the house from resident evil 7 during this part of iteration. the idea didnt work based off the fact it wasnt exactly computational"
+  },
+  {
+    "media":["images/re71.jpg","images/re72.jpg","images/re73.jpg"],
+    "notes":"I think if i wasnt on constrained timeline i would of loved to make the simulation super horrorfied and exaggerated. I will still do that to the best of my abilites but its is limited as i am using pico-8"
   }
 ]
