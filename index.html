@@ -112,7 +112,6 @@ src:url('https://dl.dropbox.com/scl/fi/bqitfm4rr6tfgt3ea2jrq/Spirit.ttf?rlkey=r8
       <h2 id="h2">Cristina Research Blog</h2>
       </div>
      <div class="main" id="main-content">
-      <p id="p">Welcome to my research blog!</p>
       </div>
     </div>
   </div>
@@ -120,7 +119,7 @@ src:url('https://dl.dropbox.com/scl/fi/bqitfm4rr6tfgt3ea2jrq/Spirit.ttf?rlkey=r8
 <script>
 const content = {
   home: `
-    <p>Welcome to my research blog!</p>
+    <p>Welcome to my research blog!<br><br><img src="https://i.postimg.cc/mrY1W0fJ/output-onlinegiftools.gif"><br>In this blog you will find things i wasnt able to include in the thesis, this includes papers and articles i read in the beginning of development that didnt end up being relevant enough to be included. Or games i played and researched that helped with prototype and idea development but werent specific enough.<img src"https://i.postimg.cc/DzR6BZ6N/IMG-0020.png"><br><br>I also speak about some more specific and personal inspirations behind this project so you are better able to understand how my expierences have shaped this project!</p>
   `,
   project: `
     <h3>Project Research</h3>
@@ -133,26 +132,35 @@ const content = {
     <p>Games I studied, mechanics, and notes.</p>
     <div id="gameplay-notes">Loading gameplay research...</div>
   `,
-  misc: `
-    <h3>Misc</h3>
-    <p>Random ideas, inspiration, and references.</p>
-  `,
+ misc: `
+  <h3>Misc</h3>
+  <p>Random ideas, inspiration, and references.</p>
+  <div id="misc-notes">Loading misc content...</div>
+`,
   scrapped: `
     <h3>Scrapped Ideas</h3>
     <p>Things that didn’t make the cut.</p>
+    <div id="scrapped-notes">Loading scrapped content...</div>
   `,
   story: `
     <h3>Storyboarding & Planning</h3>
-    <p>Narrative ideas and planning sketches.</p>
+    <p>Narrative ideas,Project inspiration and planning sketches.</p>
+    <div id="story-notes">Loading storyboards...</div>
   `
 };
 
 const main = document.getElementById("main-content");
+// Default page
+main.innerHTML = content.home;
+
 const navItems = document.querySelectorAll(".nav-item");
 
 // JSON paths
 const jsonURL = "notes.json";
 const gameplayURL = "gameplay.json";
+const storyURL = "story.json";
+const miscURL = "misc.json";
+const scrappedURL = "scrapped.json";
 
 navItems.forEach(item => {
   item.addEventListener("click", async (e) => {
@@ -167,10 +175,26 @@ navItems.forEach(item => {
     if (page === "gameplay") {
       await loadGameplayNotes();
     }
+
+    if (page === "story") {
+      await loadMediaNotes("story-notes", storyURL);
+    }
+
+    if (page === "misc") {
+      await loadMediaNotes("misc-notes", miscURL);
+    }
+
+    if (page === "scrapped") {
+      await loadMediaNotes("scrapped-notes", scrappedURL);
+    }
   });
 });
 
-// PROJECT 
+
+
+// =======================
+// PROJECT NOTES
+// =======================
 async function loadPaperNotes() {
   const container = document.getElementById("paper-notes");
   if (!container) return;
@@ -194,7 +218,9 @@ async function loadPaperNotes() {
       html += `
         <tr>
           <td class="title">
-            <a href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
+            <a href="${item.link}" target="_blank" rel="noopener">
+              ${item.title}
+            </a>
           </td>
           <td class="notes">${item.notes}</td>
         </tr>
@@ -210,7 +236,10 @@ async function loadPaperNotes() {
   }
 }
 
-// GAMEPLAY 
+
+// =======================
+// GAMEPLAY NOTES
+// =======================
 async function loadGameplayNotes() {
   const container = document.getElementById("gameplay-notes");
   if (!container) return;
@@ -224,11 +253,12 @@ async function loadGameplayNotes() {
     data.forEach(game => {
       html += `
         <div class="gameplay-item">
-         <h4 class="gameplay-title">
-  <a href="${game.link}" target="_blank" rel="noopener">
-    ${game.title}
-  </a>
-</h4>
+          <h4 class="gameplay-title">
+            <a href="${game.link}" target="_blank" rel="noopener">
+              ${game.title}
+            </a>
+          </h4>
+
           <div class="gameplay-images">
             ${game.images.map(img => `
               <img src="${img}" alt="${game.title}">
@@ -248,7 +278,54 @@ async function loadGameplayNotes() {
     container.innerHTML = "<p>Failed to load gameplay research.</p>";
   }
 }
-</script>
 
+
+// =======================
+// STORYBOARDING and misc
+// =======================
+async function loadMediaNotes(containerId, jsonPath) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  try {
+    const res = await fetch(jsonPath);
+    const data = await res.json();
+
+    let html = `<div class="story-list">`;
+
+    data.forEach(entry => {
+      const files = entry.media || entry.images || [];
+
+      const mediaHTML = files.map(file => {
+        if (file.endsWith(".mp4")) {
+          return `
+            <video controls playsinline muted preload="metadata">
+              <source src="${file}" type="video/mp4">
+            </video>
+          `;
+        }
+        return `<img src="${file}" alt="Media item">`;
+      }).join("");
+
+      html += `
+        <div class="story-item">
+          <div class="story-images">
+            ${mediaHTML}
+          </div>
+          <p class="story-notes">${entry.notes || ""}</p>
+        </div>
+      `;
+    });
+
+    html += `</div>`;
+    container.innerHTML = html;
+
+  } catch (err) {
+    console.error("Media load error:", err);
+    container.innerHTML = "<p>Failed to load content.</p>";
+  }
+}
+
+</script>
 </body>
 </html>

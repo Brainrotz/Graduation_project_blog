@@ -1,0 +1,57 @@
+[
+  {
+    "images": [
+      "images/story1.png"
+    ],
+    "notes": "Beginning sequence first story board.<br><br> A very big inspiration for this project was personal expierence. When i joined UAL i became friends with an interational student and the first time i came to their house i was blown away. Concierge, i had to request access to the lift and watched them call and confirm that i was expected. It was crazy , id never been anywhere so grand and i sure it was very obvious i didnt belong there. I was younger at the time, i think i was maybe 21? and it was my first time witnessing wealth like that. I am not going to lie it did leave a sour taste in my mouth, not necessarily disgust or envy but more so the realisation that people really live like this. In their own little bubble rent higher than what my family probably pays in 3 months. Honestly one of the first things i thought about was the affordable housing tennants..(well besides how much the rent was) because i was aware that there had to be at least a handful by law. It was also in a sense a burst of my own bubble. Obviously i was aware rich people exsisted but its a whole different ball park seeing it for yourself. I was born in Bow,i went to secondary school in Bermondsey and most of my friends where living in bow,peckham,nunhead..so in a sense i was in my own poverty bubble. We all lived in council houses and even the ones whos houses were owned... i mean we were still in bow...<br><br>That being said I have always been interested in this aspect of society. Before coming to Ual i had done a year of history and politics in swansea..but due to covid i ended up dropping out.During my art alevel i had done an architectual study into balfron tower..which i could write pages and pages on.<Br><br>I will always be passionate about this and how the work class are judged just for exsisting. I did my A-levels between 2018 and 2020 and i was also working weekends at Mcdonalds so that i was able to provide for myself. Was i starving or unable to go to school? No, never and for that i am forever greatful.However i didnt have a laptop or a tablet and my phone was a huawei hand my down that wouldnt charge half the time, Honestly the reason why i only switched the computing in 2022 was because i didnt have the resources to realise i enjoyed it untill i started working.<br><br> A-levels were cancelled and when i went to pick up my grades the government had given the entire school lower grades because we were from a lower economic postcode (YES THIS IS A REAL THING THAT HAPPENED. there was so much backlash that they took our grades back and gave us back normal ones). I remember my POLITICS TEACHER (this is important) tell me word for word 'maybe if you worked less you woudlve scored higher' and thats geniuenly when i became annoying about this topic.<br><br> Link to the lower grades for poor students if you want to learn more : https://joshuagans.substack.com/p/the-covid-19-grading-mess<br><br>Rant and life story besides, it is extremely important that we as working class people do not allow the public to hide and shame us for just living.You will never realise how much passive judgement is passed even when we do work and better ourselves.Just because weve been delt a bad hand doesnt mean we should be given scraps and hidden."
+  },
+  {
+    "images": [
+      "images/story2.jpg"
+    ],
+    "notes": "Although I want the random encounters and inconveniences the players encounter throughout the simulation to be exaggerated and at times comical, I want them to at least be grounded in reality, and what better reality to ground it in than my own? Real events where I've been interrupted or blocked trying to get to my flat entrance:<br><br>Had an individual stand outside my front door and shout 'YOURE FOLLOWING ME, WHY ARE YOU FOLLOWING ME?' to which I had to go....' youre standing outside my door...'<br><br>Had fireworks shot at me while trying to walk through my estate.<br><br>Had to stop and aid a couple because someone shot a firework that went through their open car window and hit their toddler in the face.<br><br>Watched some kids set fire to a car....and a bin.....and pretty much anything that can be set on fire.<br><br>Had someone try to coerce me into going to the cashpoint for them because I said I had no cash<br><br>Had my road shut down because there was a shooting: https://www.standard.co.uk/news/london/two-men-injured-hospital-shooting-bow-b1255244.html<br><br>Had to stop and make a police report because someone launched a shopping trolley that smashed into a car (MY CAR) and broke the window. Photographic evidence below"
+  },
+  {
+   "images": [
+      "images/evidence.jpg"
+    ],
+    "notes":"Another Beginning Sequence Story draft"
+},
+ {
+   "images": [
+      "images/blink.mp4",
+      "images/talkdraft.mp4"
+    ],
+    "notes":"Some animation drafts just to get a feel of character design"
+},
+ {
+   "images": [
+      "images/build1.png",
+      "images/build2.png",
+      "images/desk.png"
+    ],
+    "notes":"Building and interior sketches"
+},
+ {
+   "images": [
+      "images/dialouge.png"
+    ],
+    "notes":"Gameplay flow diagram, to get a good idea of what the game will actually consist of. What parts will be walking simulator and what parts will be more visual novel styled."
+},
+{
+   "images": [
+      "images/mood1.png",
+      "images/mood2.png"
+    ],
+    "notes":"some mood boards i made at the beginning of the project, One with more urban housing and one with more rural housing"
+},
+{
+   "images": [
+      "images/dg1.png",
+      "images/dg2.png"
+    ],
+    "notes":"I used this demo by isaac games as mian starting point for the walking simulation part of the demo. It has very basic 3d building models with physics and walking logic. It is also in the first person which isnt a common gameplay method on Pico-8. A lot of games tend to do a 3d up down approach, or a 3d platforming model. <br><br> Link to the tutorial game: https://isaacgames.itch.io/3d-graphics-tutorial-series"
+}
+
+
+]

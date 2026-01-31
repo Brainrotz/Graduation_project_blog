@@ -1,0 +1,19 @@
+[
+  {
+    "media": ["images/neglect.png",
+              "images/neglect2.png"],
+    "notes": "I orginally was planning to make a physcial installation of some sorts, and to help with this i was going to develop a 'neglect index' and train an algorithm based off images of entrances both taken from online and in real life."
+  },
+  {
+    "media": ["images/neglect3.png"],
+    "notes": "Example of how the algorithm would analyise images."
+  },
+  {
+    "media": ["images/h1.jpg","images/h2.jpg","images/h3.jpg","images/h7.jpg","images/h5.jpg","images/h6.jpg"],
+    "notes": "In real life images of...less than favourable entrances i saw around east london.Very big trend of poorly maintained entrances in working class areas, worse materials used etc."
+  },
+  {
+    "media": ["images/misc1.png","images/misc2.png","images/misc3.png","images/misc4.png","images/misc5.png","images/misc6.png"],
+    "notes": "Some other scrapped ideas from when it was physcial."
+  }
+]
